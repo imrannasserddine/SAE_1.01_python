@@ -24,7 +24,6 @@ def est_dependant(profil):
         bool: True si l'étudiant est dépendant, False sinon
     """
     return profil[6] >= 7
-    
 
 
 def est_avant(profil1, profil2):
@@ -46,6 +45,7 @@ def est_avant(profil1, profil2):
         if profil1[1] == profil2[1]:
             return profil1[0] < profil2[0]
 
+
 def moyenne_heures_ecran(liste_profils):
     """calcule le temps d'écran quotidien moyen des étudiants de la liste
 
@@ -55,8 +55,18 @@ def moyenne_heures_ecran(liste_profils):
     Returns:
         float: le temps d'écran quotidien moyen en heures, ou None si la liste est vide
     """
-    pass
+    heure_tot = 0
+    nb_etudiantheure = 0
+    moyenne = 0
 
+    if (len(liste_profils)) == 0:
+        return None
+    for i in range (len(liste_profils)):
+        heure_tot += liste_profils[i][3]
+        nb_etudiantheure += 1
+    moyenne = heure_tot/nb_etudiantheure
+    return moyenne
+    
 
 def taux_dependance(liste_profils):
     """calcule le pourcentage d'étudiants dépendants aux réseaux sociaux dans la liste
