@@ -77,7 +77,16 @@ def taux_dependance(liste_profils):
     Returns:
         float: le pourcentage d'étudiants dépendants, ou None si la liste est vide
     """
-    pass
+    pourcent = 0
+    etudiant_dependant = 0
+
+    if (len(liste_profils)) == 0:
+        return None
+    for i in range(len(liste_profils)):
+        if liste_profils
+
+
+
 
 
 def profil_plus_dependant(liste_profils):
